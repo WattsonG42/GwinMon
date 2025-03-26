@@ -12,4 +12,4 @@ notifiers:
       - "alert@example.com"
 
 verbose: false
-interval: 60
+interval: 1

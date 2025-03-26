@@ -7,7 +7,7 @@ import (
 
 type Service struct {
 	Name           string `yaml:"name"`
-	ExpectedStatus string `yaml:"path"`
+	ExpectedStatus string `yaml:"expected_status"`
 }
 
 type Notifier struct {
