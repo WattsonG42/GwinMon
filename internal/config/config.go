@@ -22,6 +22,7 @@ type Config struct {
 	Services []Service  `yaml:"services"`
 	Notifier []Notifier `yaml:"notifiers"`
 	Verbose  bool       `yaml:"verbose"`
+	Interval int        `yaml:"interval"`
 }
 
 func LoadConfig(path string) (*Config, error) {

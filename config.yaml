@@ -1,17 +1,15 @@
 services:
   - name: "Spooler"
     expected_status: "running"
-  - name: "W32Time"
-    expected_status: "running"
 
-
-notifier:
-  smtp_server: "smtp.example.com"
-  smtp_port: 587
-  smtp_username: "usr@example.com"
-  password: "blank" # will move to env eventually
-  recipients:
-    - "admin1@example.com"
-    - "admin2@example.com"
+notifiers:
+  - smtpServer: "smtp.example.com"
+    smtpPort: 587
+    smtpUser: "user@example.com"
+    username: "user"
+    password: "password"
+    recipients:
+      - "alert@example.com"
 
 verbose: false
+interval: 60
