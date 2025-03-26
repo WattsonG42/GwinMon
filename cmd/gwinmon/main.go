@@ -1,4 +1,4 @@
-package gwinmon
+package main
 
 import (
 	"flag"
