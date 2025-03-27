@@ -1,0 +1,15 @@
+services:
+  - name: "Spooler"
+    expected_status: "running"
+
+notifiers:
+  - smtpServer: "smtp.example.com"
+    smtpPort: 587
+    smtpUser: "user@example.com"
+    username: "user"
+    password: "password"
+    recipients:
+      - "alert@example.com"
+
+verbose: false
+interval: 1
