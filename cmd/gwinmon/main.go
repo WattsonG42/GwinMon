@@ -39,7 +39,7 @@ func main() {
 		s := svc
 		go service.MonitorService(s.Name, s.ExpectedStatus, cfg.Interval, func(message string) {
 			logger.Info(message)
-		})
+		}) // Fix panic handling
 	}
 
 	for {

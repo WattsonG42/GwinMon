@@ -67,6 +67,8 @@ func MonitorService(serviceName, expectedStatus string, interval int, callback f
 			callback(fmt.Sprintf("Error checking service %s: %v", serviceName, err))
 		} else if status != expectedStatus {
 			callback(fmt.Sprintf("Alert: Service %s is %s, expected: %s", serviceName, status, expectedStatus))
+		} else {
+			callback(fmt.Sprintf("Service %s is %s, expected: %s", serviceName, status, expectedStatus))
 		}
 		time.Sleep(time.Duration(interval) * time.Second)
 	}
